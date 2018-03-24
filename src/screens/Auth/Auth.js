@@ -19,7 +19,7 @@ class AuthScreen extends Component {
           <MainText>
             <HeadingText>Bienvenido</HeadingText>
           </MainText>
-          <DefaultButton onPress={() => alert("Hello")}>Switch to Login</DefaultButton>
+          
           <View style={styles.inputContainer}>
             <DefaultInput placeholder="Username" style={styles.input} />
             <DefaultInput placeholder="Password" style={styles.input} />
