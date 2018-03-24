@@ -12,7 +12,7 @@ class SideDrawerScreen extends Component {
         <TouchableOpacity>
           <View style={styles.drawerItem}>
             <Icon name="ios-log-out-outline" size={30} color={"#aaa"} style={styles.drawerItemicon} />
-            <Text>Sign Out</Text>
+            <Text>Cerrar Sesión</Text>
           </View>
         </TouchableOpacity>
 

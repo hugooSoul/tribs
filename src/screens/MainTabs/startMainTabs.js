@@ -13,7 +13,7 @@ const startMainTabs = () => {
       tabs: [
         {
           screen: "awesome-places.AppointmentsScreen",
-          label: "Pending Appointments",
+          label: "Citas Pendientes",
           title: "Citas Pendientes",
           icon: sources[0],
           navigatorButtons: {
@@ -28,7 +28,7 @@ const startMainTabs = () => {
         },
         {
           screen: "awesome-places.AppointmentsDoneScreen",
-          label: "Appointments Done",
+          label: "Citas Cerradas",
           title: "Citas Cerradas",
           icon: sources[1],
           navigatorButtons: {
