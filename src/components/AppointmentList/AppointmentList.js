@@ -12,7 +12,6 @@ const AppointmentList = props => {
         <ListItem
           appointmentCustomer={info.item.name}
           appointmentAddress={info.item.address}
-          appointmentPhone={info.item.phone}
           onItemPressed={() => props.onItemSelected(info.item.key)}
          />
       )}

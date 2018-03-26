@@ -10,13 +10,15 @@ const appointments = [
     key: 0, // ID must to be here as a "key" to avoid the warning
     name: "Hugo Mandujano",
     address: "Dirección",
-    phone: "123456789"
+    phone: "123456789",
+    status: false
   },
   {
     key: 1,
     name: "Julio Cesar",
     address: "Mty, NL",
-    phone: "123456789"
+    phone: "123456789",
+    status: false
   }
 ]
 
