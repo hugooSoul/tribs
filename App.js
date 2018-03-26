@@ -6,6 +6,7 @@ import AppointmentsScreen from './src/screens/Appointments/Appointments';
 import AppointmentsDoneScreen from './src/screens/Appointments/AppointmentsDone';
 import SideDrawerScreen from './src/screens/SideDrawer/SideDrawer';
 import AppointmentDetailScreen from './src/screens/AppointmentDetail/AppointmentDetail';
+import DoneAppointmentsScreen from './src/screens/AppointmentDone/DoneAppointments';
 //import configureStore from './src/store/configureStore';
 
 //const store = configureStore();
@@ -16,6 +17,7 @@ Navigation.registerComponent("awesome-places.AppointmentsScreen", () => Appointm
 Navigation.registerComponent("awesome-places.AppointmentsDoneScreen", () => AppointmentsDoneScreen);
 Navigation.registerComponent("awesome-places.SideDrawerScreen", () => SideDrawerScreen);
 Navigation.registerComponent("awesome-places.AppointmentDetailScreen", () => AppointmentDetailScreen);
+Navigation.registerComponent("awesome-places.DoneAppointmentsScreen", () => DoneAppointmentsScreen);
 
 // Start the App
 Navigation.startSingleScreenApp({

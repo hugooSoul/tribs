@@ -7,8 +7,6 @@ const ListItem = (props) => (
     <Text>{props.appointmentCustomer}</Text>
     <Text> / </Text>
     <Text>{props.appointmentAddress}</Text>
-    <Text> / </Text>
-    <Text>{props.appointmentPhone}</Text>
     </View>
   </TouchableHighlight>
 );
