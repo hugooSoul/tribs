@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, Text, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Image, Text, Button, TouchableOpacity, ScrollView } from 'react-native';
 //import { connect } from 'react-redux';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import ServiceForm from '../../components/Form/ServiceForm';
 
-class AppointmentDetailScreen extends Component {
+class ServiceFormScreen extends Component {
 
   render () {
     return (
-      <View style={styles.container}>
-        <View>
+      <ScrollView>
+        <View style={styles.container}>
           <Text style={styles.placeName}>{this.props.selectedPlace.name}</Text>
         </View>
         <View>
-          <Text>Formulario aquí...</Text>
+          <ServiceForm customerName={this.props.selectedPlace.name} />
         </View>
-      </View>
+      </ScrollView>
     );
   }
 };
@@ -43,4 +44,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AppointmentDetailScreen;
+export default ServiceFormScreen;
