@@ -2,24 +2,9 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, DatePickerIOS } from 'react-native';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
 import TimePickerDefault from '../../components/UI/TimePicker/TimePicker';
-
-//var moment = require('moment');
+import SelectInput from '../../components/UI/SelectInput/SelectInput';
 
 class ServiceForm extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      chosenDate: new Date(),
-      showDatePicker: false
-    };
-
-    this.setDate = this.setDate.bind(this);
-  }
-
-  setDate(newDate) {
-    this.setState({chosenDate: newDate})
-  }
 
   render () {
     return (
@@ -38,10 +23,7 @@ class ServiceForm extends Component {
 
         <TimePickerDefault nameInput={"Hora de Salida"} />
 
-        <DefaultInput
-          placeholder="Termino:"
-          value={this.props.placeName}
-          onChangeText={this.props.onChangeText} />
+        <SelectInput nameInput={"¿Termino?"} />
 
         <DefaultInput
           placeholder="Cámara:"

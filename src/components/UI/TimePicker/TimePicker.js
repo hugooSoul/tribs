@@ -31,7 +31,7 @@ class TimePickerDefault extends Component {
         );
     }
 };
-//{this.state.date}
+
 const styles = StyleSheet.create({
   pickerContainer: {
     padding: 6,
