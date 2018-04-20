@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, DatePickerIOS } from 'react-native';
+import { StyleSheet, View, Text, DatePickerIOS, Button } from 'react-native';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
 import TimePickerDefault from '../../components/UI/TimePicker/TimePicker';
 import SelectInput from '../../components/UI/SelectInput/SelectInput';
 import PickImage from '../PickImage/PickImage';
 
 class ServiceForm extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.addButton = this.addButton.bind(this);
+    this.state = {
+      data: []
+    }
+  }
+
+  addButton() {
+    let newly_added_data = { title: 'new title', content: 'new content goes here' };
+
+    this.setState({
+        data: [...this.state.data, newly_added_data]
+    });
+  }
 
   state = {
     image: {
@@ -30,6 +47,12 @@ class ServiceForm extends Component {
 
   render () {
 
+    let added_buttons_goes_here = this.state.data.map( (data, index) => {
+      return (
+        <PickImage key={index} onImagePicked={this.imagePickedHandler} />
+      )
+    });
+
     return (
       <View>
         <DefaultInput
@@ -49,13 +72,22 @@ class ServiceForm extends Component {
         <SelectInput nameInput={"¿Termino?"} />
 
         <PickImage onImagePicked={this.imagePickedHandler} />
+        {added_buttons_goes_here}
+
+        <Button title="Add more" onPress={this.addButton} style={styles.button} />
       </View>
     );
   }
 };
 
 const styles = StyleSheet.create({
-
+  button: {
+    height:60,
+    backgroundColor: '#ededed',
+    marginTop:10,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 });
 
 export default ServiceForm;
